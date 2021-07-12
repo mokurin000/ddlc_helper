@@ -1,5 +1,5 @@
 [package]
-name = "ddlc"
+name = "ddlc_helper"
 version = "0.1.0"
 edition = "2018"
 
