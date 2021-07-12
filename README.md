@@ -12,3 +12,7 @@ DDLC_Helper is a tool to select words in DDLC(Plus).
 2. Use OCR service to recogonise words in a shortcut of the game.
 3. Type the words we just got to this tool. (the words should be split in whitespaces like CRLF, Space, Tab, ...)
 4. Select one of words ddlc_helper prints.
+
+## Notice
+
+This tool is NOT letter-case sensitive.
