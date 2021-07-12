@@ -1,11 +1,3 @@
-#[cfg(test)]
-mod test{
-    #[test]
-    fn test_sayori_words() {
-
-    }
-}
-
 use once_cell::sync::Lazy;
 use std::collections::HashSet;
 
