@@ -11,8 +11,6 @@ enum Charactor {
 }
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
-    
-
     println!("Please select the charactor you like: (enter the number near names)");
     println!("0 Sayori, 1 Yuri, 2 Natsuki\n");
 
@@ -22,7 +20,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         stdin().read_line(&mut buf)?;
 
         let num = buf.trim().parse::<u32>()?;
-        
+
         match num {
             0 => Charactor::Sayori,
             1 => Charactor::Yuri,
@@ -44,18 +42,14 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             if index % 2 == 1 {
                 println!("{}", word);
             } else {
-                print!("{}\t",word);
+                print!("{}\t", word);
             }
         }
         println!();
     }
 }
 
-fn filter_words<'a> (
-    words: impl Iterator<Item=&'a str>,
-    charactor: Charactor)
--> Vec<String> {
-
+fn filter_words<'a>(words: impl Iterator<Item = &'a str>, charactor: Charactor) -> Vec<String> {
     let words_set = match charactor {
         Charactor::Sayori => &SAYORI_WORDS_SET,
         Charactor::Yuri => &YURI_WORDS_SET,
@@ -63,7 +57,7 @@ fn filter_words<'a> (
     };
 
     words
-    .map(|s| s.to_lowercase() )
-    .filter(|s| words_set.contains::<str>(&s))
-    .collect()
+        .map(|s| s.to_lowercase())
+        .filter(|s| words_set.contains::<str>(&s))
+        .collect()
 }
