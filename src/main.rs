@@ -46,7 +46,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         if index % 2 == 1 {
             println!("{}", word);
         } else {
-            print!("{}",word);
+            print!("{}\t\t",word);
         }
     }
     println!();
