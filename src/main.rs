@@ -1,16 +1,14 @@
+mod data;
+use data::*;
+
+use std::io::stdin;
+
+#[derive(Copy, Clone)]
 enum Charactor {
     Sayori,
     Yuri,
     Natsuki,
 }
-
-mod data;
-use data::SAYORI_WORDS_SET;
-use data::YURI_WORDS_SET;
-use data::NATSUKI_WORDS_SET;
-
-use std::io::Read;
-use std::io::stdin;
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     
@@ -33,25 +31,24 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         }
     };
 
-    println!("Great! Now please input your words until EOF.");
+    println!("Great! Now please input the words in a line.");
+    loop {
+        let mut raw_words = String::new();
+        stdin().read_line(&mut raw_words)?;
 
-    let mut raw_words = String::new();
-    stdin().read_to_string(&mut raw_words)?;
+        let words_list = raw_words.split_whitespace();
+        let result = filter_words(words_list, charactor);
 
-    let words_list = raw_words.split_whitespace();
-    let result = filter_words(words_list, charactor);
-
-    println!("Result:");
-    for (index, word) in result.into_iter().enumerate() {
-        if index % 2 == 1 {
-            println!("{}", word);
-        } else {
-            print!("{}\t\t",word);
+        println!("Result:");
+        for (index, word) in result.into_iter().enumerate() {
+            if index % 2 == 1 {
+                println!("{}", word);
+            } else {
+                print!("{}\t",word);
+            }
         }
+        println!();
     }
-    println!();
-
-    Ok(())
 }
 
 fn filter_words<'a> (
