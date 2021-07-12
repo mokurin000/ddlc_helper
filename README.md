@@ -1,6 +1,5 @@
 # ddlc_helper
 
-[![License: CC BY-NC-SA 3.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%203.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/3.0/)
 ![crates.io](https://img.shields.io/crates/v/ddlc_helper.svg)
 
 DDLC_Helper is a tool to select words in DDLC(Plus).
