@@ -4,6 +4,8 @@
 
 DDLC_Helper is a tool to select words in DDLC(Plus).
 
+Release are avaliable on [Github](https://github.com/poly000/ddlc_helper/releases)
+
 ## Usage
 
 0. Select a charactor you like. (e.g. Sayori)
