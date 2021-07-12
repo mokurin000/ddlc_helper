@@ -43,7 +43,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     println!("Result:");
     for (index, word) in result.into_iter().enumerate() {
-        if index % 2 == 0 {
+        if index % 2 == 1 {
             println!("{}", word);
         } else {
             print!("{}",word);
