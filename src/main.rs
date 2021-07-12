@@ -23,7 +23,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
         stdin().read_line(&mut buf)?;
 
-        let num = buf.parse::<u32>()?;
+        let num = buf.trim().parse::<u32>()?;
         
         match num {
             0 => Charactor::Sayori,
@@ -57,7 +57,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 fn filter_words<'a> (
     words: impl Iterator<Item=&'a str>,
     charactor: Charactor)
--> Vec<&'a str> {
+-> Vec<String> {
 
     let words_set = match charactor {
         Charactor::Sayori => &SAYORI_WORDS_SET,
@@ -66,6 +66,7 @@ fn filter_words<'a> (
     };
 
     words
-    .filter(|s| words_set.contains( s.to_lowercase()))
+    .map(|s| s.to_lowercase() )
+    .filter(|s| words_set.contains::<str>(&s))
     .collect()
 }
