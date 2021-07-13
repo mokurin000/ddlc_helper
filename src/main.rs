@@ -36,16 +36,14 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
         let words_list = raw_words.split_whitespace();
         let result = filter_words(words_list, charactor);
-
-        println!("\nResult:");
-        for (index, word) in result.into_iter().enumerate() {
-            if index % 2 == 1 {
-                println!("{}", word);
-            } else {
-                print!("{}\t", word);
+        
+        if !result.is_empty() {
+            println!("\nResult: ");
+            for word in result {
+                print!("{} ", word);
             }
+            println!("\n");
         }
-        println!("\n");
     }
 }
 
