@@ -37,7 +37,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         let words_list = raw_words.split_whitespace();
         let result = filter_words(words_list, charactor);
 
-        println!("Result:");
+        println!("\nResult:");
         for (index, word) in result.into_iter().enumerate() {
             if index % 2 == 1 {
                 println!("{}", word);
@@ -45,7 +45,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                 print!("{}\t", word);
             }
         }
-        println!();
+        println!("\n");
     }
 }
 
