@@ -1,6 +1,3 @@
-//! This file was licensed under CC-BY-NC-SA 3.0,
-//! due to https://zh.moegirl.org.cn/
-
 use once_cell::sync::Lazy;
 use std::collections::HashSet;
 
