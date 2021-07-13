@@ -1,9 +1,9 @@
 [package]
 author = "poly000"
 name = "ddlc_helper"
-version = "1.2.1"
+version = "1.2.2"
 edition = "2018"
-license-file = "LICENSE"
+license = "MIT"
 description = "DDLC word selecting helper."
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
