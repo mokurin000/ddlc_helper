@@ -38,7 +38,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         let result = filter_words(words_list, charactor);
         
         if !result.is_empty() {
-            println!("\nResult: ");
+            print!("\nResult: ");
             for word in result {
                 print!("{} ", word);
             }
