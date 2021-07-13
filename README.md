@@ -1,6 +1,6 @@
 # ddlc_helper
 
-![crates.io](https://img.shields.io/crates/v/ddlc_helper.svg)
+[![crates.io](https://img.shields.io/crates/v/ddlc_helper.svg)](https://crates.io/crates/ddlc_helper)
 
 DDLC_Helper is a tool to select words in DDLC(Plus).
 
