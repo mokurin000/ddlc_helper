@@ -60,7 +60,7 @@ fn filter_words<'a>(
     words
         .map(|s| s.to_lowercase())
         .filter_map(|s| -> Option<&str> {
-            if let Some(&word) = words_set.get::<str>(s.as_ref()) {
+            if let Some(&word) = words_set.get(&*s) {
                 Some(word)
             } else {
                 None
