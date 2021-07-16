@@ -36,7 +36,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
         let words_list = raw_words.split_whitespace();
         let result = filter_words(words_list, charactor);
-        
+
         if !result.is_empty() {
             print!("\nResult: ");
             for word in result {
@@ -47,7 +47,10 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     }
 }
 
-fn filter_words<'a>(words: impl Iterator<Item = &'a str>, charactor: Charactor) -> Vec<String> {
+fn filter_words<'a>(
+    words: impl Iterator<Item = &'a str>,
+    charactor: Charactor,
+) -> Vec<&'static str> {
     let words_set = match charactor {
         Charactor::Sayori => &SAYORI_WORDS_SET,
         Charactor::Yuri => &YURI_WORDS_SET,
@@ -56,6 +59,12 @@ fn filter_words<'a>(words: impl Iterator<Item = &'a str>, charactor: Charactor) 
 
     words
         .map(|s| s.to_lowercase())
-        .filter(|s| words_set.contains::<str>(&s))
+        .filter_map(|s| -> Option<&str> {
+            if let Some(&word) = words_set.get::<str>(s.as_ref()) {
+                Some(word)
+            } else {
+                None
+            }
+        })
         .collect()
 }
