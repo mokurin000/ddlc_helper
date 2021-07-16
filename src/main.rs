@@ -30,8 +30,9 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     };
 
     println!("Great! Now please input the words in a line.");
+
+    let mut raw_words = String::new();
     loop {
-        let mut raw_words = String::new();
         stdin().read_line(&mut raw_words)?;
 
         let words_list = raw_words.split_whitespace();
