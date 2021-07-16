@@ -14,7 +14,7 @@ Releases are avaliable on [Github](https://github.com/poly000/ddlc_helper/releas
 1. You should set language as __English__ in DDLC when selecting words.
 2. Use OCR tool to recogonise words in the game. (e.g. ShareX)
 3. Type the words we just got to this tool. (the words should be split in whitespaces like CRLF, Space, Tab, ...)
-4. Select one of words ddlc_helper prints suffixed with "Result:".
+4. Select one of words ddlc_helper prints prefixed with "Result:".
 
 ## Notice
 
