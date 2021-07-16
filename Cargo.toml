@@ -1,5 +1,5 @@
 [package]
-authors = "poly000"
+authors = ["poly000"]
 name = "ddlc_helper"
 version = "1.2.3"
 edition = "2018"
