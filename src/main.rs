@@ -25,7 +25,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             0 => Charactor::Sayori,
             1 => Charactor::Yuri,
             2 => Charactor::Natsuki,
-            _ => panic!("charactor code was out of bound!"),
+            _ => return Err("charactor code was out of bound!".into()),
         }
     };
 
