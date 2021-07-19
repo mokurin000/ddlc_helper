@@ -1,7 +1,6 @@
 //! the words are from [DDLC wiki](https://ddlcwiki.net/wiki/Poem_game)
-
-use once_cell::sync::Lazy;
 use std::collections::HashSet;
+use std::lazy::SyncLazy;
 
 static SAYORI_WORDS: [&'static str; 88] = [
     "adventure",
@@ -240,11 +239,11 @@ static NATSUKI_WORDS: [&'static str; 62] = [
     "whistle",
 ];
 
-pub static SAYORI_WORDS_SET: Lazy<HashSet<&'static str>> =
-    Lazy::new(|| SAYORI_WORDS.iter().map(|refe| *refe).collect());
+pub static SAYORI_WORDS_SET: SyncLazy<HashSet<&'static str>> =
+    SyncLazy::new(|| SAYORI_WORDS.iter().map(|refe| *refe).collect());
 
-pub static YURI_WORDS_SET: Lazy<HashSet<&'static str>> =
-    Lazy::new(|| YURI_WORDS.iter().map(|refe| *refe).collect());
+pub static YURI_WORDS_SET: SyncLazy<HashSet<&'static str>> =
+    SyncLazy::new(|| YURI_WORDS.iter().map(|refe| *refe).collect());
 
-pub static NATSUKI_WORDS_SET: Lazy<HashSet<&'static str>> =
-    Lazy::new(|| NATSUKI_WORDS.iter().map(|refe| *refe).collect());
+pub static NATSUKI_WORDS_SET: SyncLazy<HashSet<&'static str>> =
+    SyncLazy::new(|| NATSUKI_WORDS.iter().map(|refe| *refe).collect());

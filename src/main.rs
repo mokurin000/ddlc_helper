@@ -1,3 +1,5 @@
+#![feature(once_cell)]
+
 mod data;
 use data::*;
 
