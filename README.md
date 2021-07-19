@@ -8,6 +8,15 @@ DDLC_Helper is a tool to select words in DDLC(Plus).
 
 Releases are avaliable on [Github](https://github.com/poly000/ddlc_helper/releases)
 
+## Build
+
+```
+cargo +nightly build
+```
+
+This project used the unstable feature [once_cell](https://github.com/rust-lang/rust/issues/74465) after `2.0.0`.
+
+
 ## Usage
 
 0. Select a charactor you like. (e.g. Sayori)

@@ -6,6 +6,14 @@ DDLC_Helper 是心跳文学部（Plus）的选词工具。
 
 可以在 [Github](https://github.com/poly000/ddlc_helper/releases) 上下载软件本体。
 
+## 编译
+
+```
+cargo +nightly build
+```
+
+本项目在版本 `2.0.0` 以后使用了不稳定的特性 [once_cell](https://github.com/rust-lang/rust/issues/74465) 。
+
 ## 用法
 
 0. 选择您喜欢的角色 (例如 纱世里（Sayori）)
