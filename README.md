@@ -11,7 +11,7 @@ Releases are avaliable on [Github](https://github.com/poly000/ddlc_helper/releas
 ## Build
 
 ```
-cargo +nightly build
+cargo +nightly build --release
 ```
 
 This project used the unstable feature [once_cell](https://github.com/rust-lang/rust/issues/74465) after `2.0.0`.

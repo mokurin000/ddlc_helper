@@ -9,7 +9,7 @@ DDLC_Helper 是心跳文学部（Plus）的选词工具。
 ## 编译
 
 ```
-cargo +nightly build
+cargo +nightly build --release
 ```
 
 本项目在版本 `2.0.0` 以后使用了不稳定的特性 [once_cell](https://github.com/rust-lang/rust/issues/74465) 。
