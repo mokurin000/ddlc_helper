@@ -1,12 +1,11 @@
-cargo-features = ["edition2021"]
 [package]
 authors = ["poly000"]
 name = "ddlc_helper"
-version = "2.0.1"
-edition = "2021"
+version = "2.0.2"
+edition = "2018"
 license = "MIT"
 repository = "https://github.com/poly000/ddlc_helper"
-description = "DDLC word selecting helper."
+description = "DDLC word selecting helper, and a library of DDLC poem's words."
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 

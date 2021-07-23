@@ -1,7 +1,6 @@
-#![feature(once_cell)]
-
-mod data;
-use data::*;
+use ::ddlc_helper::SAYORI_WORDS_SET;
+use ::ddlc_helper::YURI_WORDS_SET;
+use ::ddlc_helper::NATSUKI_WORDS_SET;
 
 use std::io::stdin;
 

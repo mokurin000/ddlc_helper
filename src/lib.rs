@@ -1,3 +1,5 @@
+#![feature(once_cell)]
+
 //! the words are from [DDLC wiki](https://ddlcwiki.net/wiki/Poem_game)
 use std::collections::HashSet;
 use std::lazy::SyncLazy;
