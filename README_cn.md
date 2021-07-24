@@ -4,7 +4,7 @@
 
 DDLC_Helper 是心跳文学部（Plus）的选词工具。
 
-可以在 [Github](https://github.com/poly000/ddlc_helper/releases) 上下载软件本体。
+可以在 [Github](https://github.com/poly000/ddlc_helper/releases) 上下载windows的构建。
 
 ## 编译
 
