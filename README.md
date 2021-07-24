@@ -6,7 +6,7 @@
 
 DDLC_Helper is a tool to select words in DDLC(Plus).
 
-Releases are avaliable on [Github](https://github.com/poly000/ddlc_helper/releases)
+Releases for Windows are avaliable on [Github](https://github.com/poly000/ddlc_helper/releases)
 
 ## Build
 
