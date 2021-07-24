@@ -4,7 +4,7 @@
 
 [**中文文档**](https://github.com/poly000/ddlc_helper/blob/main/README_cn.md)
 
-DDLC_Helper is a tool to select words in DDLC(Plus).
+DDLC_Helper is a tool to select words in DDLC( Plus).
 
 Releases for Windows are avaliable on [Github](https://github.com/poly000/ddlc_helper/releases)
 
