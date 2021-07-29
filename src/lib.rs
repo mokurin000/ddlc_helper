@@ -1,5 +1,9 @@
 #![feature(once_cell)]
 
+#![doc = include_str!("../README.md")]
+#![doc = include_str!("../README_cn.md")]
+
+//!
 //! the words are from [DDLC wiki](https://ddlcwiki.net/wiki/Poem_game)
 use std::collections::HashSet;
 use std::lazy::SyncLazy;
