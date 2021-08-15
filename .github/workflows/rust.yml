@@ -39,12 +39,12 @@ jobs:
           - platform: windows-i686
             target: i686-pc-windows-msvc
             os: windows-latest
-            bin: ddlc_helper
+            bin: ddlc_helper.exe
             
           - platform: windows-x86_64
             target: x86_64-pc-windows-msvc
             os: windows-latest
-            bin: ddlc_helper
+            bin: ddlc_helper.exe
             
     steps:
       - name: Install toolchain
