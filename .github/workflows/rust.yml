@@ -5,7 +5,7 @@ name: Build Canary Version
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   release:
