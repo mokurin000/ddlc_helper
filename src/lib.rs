@@ -1,14 +1,12 @@
-#![feature(once_cell)]
-
 #![doc = include_str!("../README.md")]
 #![doc = include_str!("../README_cn.md")]
 
 //!
 //! the words are from [DDLC wiki](https://ddlcwiki.net/wiki/Poem_game)
-use std::collections::HashSet;
-use std::lazy::SyncLazy;
 
-static SAYORI_WORDS: [&'static str; 88] = [
+use phf::{phf_set, Set};
+
+pub static SAYORI_WORDS_SET: Set<&'static str> = phf_set! {
     "adventure",
     "alone",
     "amazing",
@@ -97,9 +95,9 @@ static SAYORI_WORDS: [&'static str; 88] = [
     "vacation",
     "warm",
     "wonderful",
-];
+};
 
-static YURI_WORDS: [&'static str; 78] = [
+pub static YURI_WORDS_SET: Set<&'static str> = phf_set! {
     "afterimage",
     "agonizing",
     "ambient",
@@ -178,9 +176,9 @@ static YURI_WORDS: [&'static str; 78] = [
     "vivid",
     "whirlwind",
     "wrath",
-];
+};
 
-static NATSUKI_WORDS: [&'static str; 62] = [
+pub static NATSUKI_WORDS_SET: Set<&'static str> = phf_set! {
     "anger",
     "anime",
     "blanket",
@@ -243,13 +241,4 @@ static NATSUKI_WORDS: [&'static str; 62] = [
     "waterfall",
     "whisper",
     "whistle",
-];
-
-pub static SAYORI_WORDS_SET: SyncLazy<HashSet<&'static str>> =
-    SyncLazy::new(|| SAYORI_WORDS.iter().map(|refe| *refe).collect());
-
-pub static YURI_WORDS_SET: SyncLazy<HashSet<&'static str>> =
-    SyncLazy::new(|| YURI_WORDS.iter().map(|refe| *refe).collect());
-
-pub static NATSUKI_WORDS_SET: SyncLazy<HashSet<&'static str>> =
-    SyncLazy::new(|| NATSUKI_WORDS.iter().map(|refe| *refe).collect());
+};

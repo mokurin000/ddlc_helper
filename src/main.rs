@@ -1,6 +1,6 @@
+use ::ddlc_helper::NATSUKI_WORDS_SET;
 use ::ddlc_helper::SAYORI_WORDS_SET;
 use ::ddlc_helper::YURI_WORDS_SET;
-use ::ddlc_helper::NATSUKI_WORDS_SET;
 
 use std::io::stdin;
 
@@ -15,9 +15,9 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!("Please select the charactor you like: (enter the number near names)");
     println!("0 Sayori, 1 Yuri, 2 Natsuki\n");
 
-    let charactor = {
-        let mut buf = String::new();
+    let mut buf = String::new();
 
+    let charactor = {
         stdin().read_line(&mut buf)?;
 
         let num = buf.trim().parse::<u32>()?;
@@ -30,45 +30,41 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         }
     };
 
+    buf.clear();
+
     println!("Great! Now please input the words in a line.");
 
-    let mut raw_words = String::new();
     loop {
-        stdin().read_line(&mut raw_words)?;
+        loop {
+            stdin().read_line(&mut buf)?;
 
-        let words_list = raw_words.split_whitespace();
+            if buf.lines().last() == Some("") {
+                break;
+            }
+        }
+
+        let words_list = buf.split_whitespace();
         let result = filter_words(words_list, charactor);
 
-        if !result.is_empty() {
-            print!("\nResult: ");
-            for word in result {
-                print!("{} ", word);
-            }
-            println!("\n");
+        print!("\nResult: ");
+        for word in result {
+            print!("{} ", word);
         }
-        
-        raw_words.clear();
+        println!("\n");
+
+        buf.clear();
     }
 }
 
 fn filter_words<'a>(
     words: impl Iterator<Item = &'a str>,
     charactor: Charactor,
-) -> Vec<&'static str> {
+) -> impl Iterator<Item = &'a str> {
     let words_set = match charactor {
         Charactor::Sayori => &SAYORI_WORDS_SET,
         Charactor::Yuri => &YURI_WORDS_SET,
         Charactor::Natsuki => &NATSUKI_WORDS_SET,
     };
 
-    words
-        .map(|s| s.to_lowercase())
-        .filter_map(|s| -> Option<&str> {
-            if let Some(&word) = words_set.get(&*s) {
-                Some(word)
-            } else {
-                None
-            }
-        })
-        .collect()
+    words.filter(move |word| words_set.contains(&word.to_lowercase()))
 }

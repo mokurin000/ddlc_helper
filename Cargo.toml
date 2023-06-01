@@ -10,6 +10,7 @@ description = "DDLC word selecting helper, and a library of DDLC poem's words."
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+phf = { version = "0.11.1", features = ["macros"] }
 
 [profile.release]
 lto = true
