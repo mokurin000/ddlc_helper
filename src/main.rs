@@ -38,7 +38,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         loop {
             stdin().read_line(&mut buf)?;
 
-            if buf.lines().last() == Some("") {
+            if buf.lines().last().map(|i| i.trim()) == Some("") {
                 break;
             }
         }
