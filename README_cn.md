@@ -9,10 +9,8 @@ DDLC_Helper 是心跳文学部（Plus）的选词工具。
 ## 编译
 
 ```
-cargo +nightly build --release
+cargo build --release
 ```
-
-本项目在版本 `2.0.0` 以后使用了不稳定的特性 [once_cell](https://github.com/rust-lang/rust/issues/74465) 。
 
 ## 用法
 
@@ -21,7 +19,3 @@ cargo +nightly build --release
 2. 使用OCR工具识别游戏中的单词（比如，ShareX）。
 3. 将刚刚得到的单词输入到本工具。这些单词应该以 “空白” 分隔开。“空白” 可以是换行符，空格，制表符等等。
 4. 选择本工具以 “Result:” 前缀输出的单词。
-
-## 注意
-
-本工具 **不区分** 字母大小写，即使输出总是小写。

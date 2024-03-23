@@ -11,11 +11,8 @@ Releases for Windows are avaliable on [Github](https://github.com/poly000/ddlc_h
 ## Build
 
 ```
-cargo +nightly build --release
+cargo build --release
 ```
-
-This project used the unstable feature [once_cell](https://github.com/rust-lang/rust/issues/74465) after `2.0.0`.
-
 
 ## Usage
 
@@ -24,7 +21,3 @@ This project used the unstable feature [once_cell](https://github.com/rust-lang/
 2. Use OCR tool to recogonise words in the game. (e.g. ShareX)
 3. Type the words we just got to this tool. (the words should be split in whitespaces like CRLF, Space, Tab, ...)
 4. Select one of words ddlc_helper prints prefixed with "Result:".
-
-## Notice
-
-This tool is **NOT** letter-case sensitive, although the output should always be lowercase.
